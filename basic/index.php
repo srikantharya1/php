@@ -20,7 +20,7 @@
         <tbody>
             <?php 
             $result = mysqli_query($connection, "SELECT * FROM `students`");
-            if (!$result) die("query Failed: " . mysqli_error());
+            if (!$result) die("mysqli Failed: " . mysqli_error());
             while ($row = mysqli_fetch_assoc($result)) : ?>
                 <tr>
                     <td><?= $row['id'] ?></td>
